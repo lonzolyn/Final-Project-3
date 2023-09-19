@@ -1,6 +1,6 @@
 # Working Title: |Amusement Park Review|
-    This website will allow users to search and view a list of theme parks in the USA. 
-    They will also be able to rate and review their experiences various theme parks. 
+    This website will allow users to search and view a list of national parks in the USA. 
+    They will also be able to search activies and names of the national parks.  
 ## Tech Staff
     alonzo lynch3
     khadija mumford
@@ -11,3 +11,5 @@
 ## Technologies
 
 ## Issues, Bugs and Unfinished Functionalities
+
+    - Where originally going to build a website reviewing theme parks, but could not find an approp
