@@ -3,15 +3,14 @@ const mongoose = require('mongoose')
 const cors = require('cors')
 require('dotenv').config()
 
-
+const parkRoutes = require('./routes/park')
 
 const app = express()
 
 //middlewares
 app.use(express.json())
 
-//routes
-
+app.use('/park', parkRoutes)
 
 //database connection
 mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })  
