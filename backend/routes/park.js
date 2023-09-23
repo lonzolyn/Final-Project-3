@@ -3,8 +3,8 @@ const {
     getAllPark,
     getParkById,
     createPark,
-    UpDateParkById,
-    DeleteParkById
+    updateParkById,
+    deleteParkById
 } = require('../controllers/park')
 
 //get /
@@ -14,12 +14,12 @@ router.get('/', getAllPark)
 router.get('/:id', getParkById)
 
 //post/ create
-router.post('/', )
+router.post('/',createPark)
 
 //put/:id update
-//router.put('/:id', UpdateParkById)
+router.put('/:id', updateParkById)
 
 //delete/:id delete by id
-//router.delete('/id', DeleteParkId)
+router.delete('/:id', deleteParkById)
 
 module.exports = router
