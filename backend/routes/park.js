@@ -1,5 +1,4 @@
 const router = require('express').Router()
-//const { Router } = require('express')
 const {
     getAllPark,
     getParkById,
@@ -15,12 +14,12 @@ router.get('/', getAllPark)
 router.get('/:id', getParkById)
 
 //post/ create
-router.post('/', createPark)
+router.post('/', )
 
 //put/:id update
-router.put('/:id', UpdateParkById)
+//router.put('/:id', UpdateParkById)
 
 //delete/:id delete by id
-router.delete('/id', DeleteParkId)
+//router.delete('/id', DeleteParkId)
 
 module.exports = router

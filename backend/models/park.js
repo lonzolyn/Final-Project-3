@@ -13,6 +13,6 @@ const parkSchema = new mongoose.Schema({
     },
      baker: { 
       type: mongoose.Types.ObjectId,
-     ref: 'Baker' } 
+     ref: 'Park' } 
 })
 module.exports = mongoose.model('Park', parkSchema)
