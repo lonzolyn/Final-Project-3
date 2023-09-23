@@ -29,10 +29,35 @@ async function createPark(req, res) {
     } 
 }
 
+async function updateParkById(req, res) { 
+    try { 
+        if (!req.body.image) req.body.image = undefined 
+        await Bread.findByIdAndUpdate(req.body) 
+        res.status(204).json({ 'message': 'park updated' }) 
+    } catch (error) { 
+        console.log('error updating park:', error) 
+        res.json({ 'message': 'error updating park' }) 
+    } 
+}
+
+
+async function deleteParkById(req, res) { 
+    try { 
+        const { id } = req.params 
+        await Park.findByIdAndDelete(id) 
+        res.status(204).json({ 'message': 'park deleted' }) 
+    } catch (error) { 
+        console.log('error deleting park:', error) 
+        res.json({ 'message': 'error deleting breadpark' }) 
+    } 
+}
+
 
 module.exports = {
     getAllPark,
     getParkById,
     createPark,
+    updateParkById,
+    deleteParkById,
 }
 
