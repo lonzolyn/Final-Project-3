@@ -1,4 +1,8 @@
 import React, {useEffect, useState } from 'react'
+import './App.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import NavbarComp from './components/NavbarComp';
+import { SearchBar } from './components/SearchBar';
 
 function App(){
 
@@ -14,16 +18,14 @@ function App(){
     )
   },[])
   return (
-    <div>
-      {(typeof backendData.users === 'undefined') ? (
-        <p>Loading...</p>
-      ): (
-        backendData.users.map((user,i) => (
-          <p key={i}>{user}</p>
-        ))
-      )
-      
-      }
+    <div className="App">
+      <div> 
+        <NavbarComp />
+      </div>
+       <h1> Your Adventure Begins Here...</h1>
+      <div className= "search-bar-container">
+        <SearchBar></SearchBar>
+      </div>
     </div>
   )
 }
