@@ -1,4 +1,4 @@
-# Working Title: |Learn Your National Parks|
+# Working Title: |Amusement Park Review|
     This website will allow users to search and view a list of national parks in the USA. 
     They will also be able to search activies and names of the national parks.  
 ## Tech Staff
