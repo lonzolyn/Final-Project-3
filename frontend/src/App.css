@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .App {
         background-image: url("/Users/khadijamumford/Final-Project-3/frontend/src/components/images/photo-1594324587519-20940384fd9c.avif"); 
         background-size: cover;   
@@ -27,3 +28,31 @@ h1{
     color:black;
     text-shadow: 2px 2px 5px grey;
 }
+=======
+body {
+    background-image: url("/Users/khadijamumford/Final-Project-3/frontend/src/components/images/photo-1594324587519-20940384fd9c.avif"); 
+    background-size: cover;   
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100vh;
+    width: 100vw;
+  }
+  
+  h1{
+  padding-top: 20vh;
+  width: 50%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 200px;
+  color:black;
+  text-shadow: 2px 2px 5px grey;
+  }
+  
+  img{
+    height: 200px;
+    width:200px;
+  }
+
+>>>>>>> main
