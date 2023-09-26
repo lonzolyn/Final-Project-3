@@ -5,7 +5,7 @@ const parkSchema = new mongoose.Schema({
         type: String, 
         required: true 
     }, 
-    hasGluten: { 
+    wasNice: { 
         type: Boolean
      }, image: { 
         type: String,  
