@@ -1,29 +1,19 @@
-const express = require('express')
-const mongoose = require('mongoose')
-const cors = require('cors')
 require('dotenv').config()
+const express = require('express')
+const bodyParser = require('body-parser')
+const cors = require('cors')
+const app = express();
 
-const parkRoutes = require('./routes/park')
+app.use(cors())
+app.use(express.static('public'))
+app.use(express.urlencoded({ extended: true }))
+app.use(bodyParser.json())
 
-const app = express()
+app.use(express.urlencoded({ extended: true }))
 
-//middlewares
-app.use(express.json())
+app.use('/parks', require('./controllers/parks'))
+app.use('/users', require('./controllers/users'))
 
-app.use('/park', parkRoutes)
-
-//database connection
-mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })  
-.then(() => console.log('DB connected'))
-.catch(err => console.error(err));
-
-//app.get("/api", (req,res)=> {
-   // res.json({"users": ["userOne", "userTwo", "userThree"]})
-//})
-
-
-const PORT = process.env.PORT || 8080
-
-app.listen(PORT, console.log(`listening on port ${PORT}`))
-
-//added a line//
+app.listen(process.env.PORT, () => {
+    console.log(`Listening on ${process.env.PORT}`)
+})
