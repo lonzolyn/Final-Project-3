@@ -1,32 +1,50 @@
 import React, {useEffect, useState } from 'react'
-import './App.css'
+import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavbarComp from './components/NavbarComp';
-import { SearchBar } from './components/SearchBar';
+import Gallery from './components/Gallery';
+import SearchBar from './components/SearchBar';
 
-function App(){
 
-  const [backendData, setBackendData] = useState([{}])
+const App = () => {
+  let [search, setSearch] = useState('')
+  let [message, setMessage] = useState('')
+  let [data, setData] = useState([])
+  //API KEY//
 
-  useEffect(() => {
-    fetch("/api").then(
-      response => response.json()
-    ).then(
-      data => {
-        setBackendData(data)
+useEffect(() => {
+      if(search) {
+        const API_URL = 'https://developer.nps.gov/api/v1/parks?parkCode='+ search +'&api_key=YKBdqXoSZWQ6mPm8F6O5RQOEOAPb9sOWeEJb73f6'
+          const fetchData = async () => {
+              document.title = `${search} parks`
+              const response = await fetch(API_URL)
+              const resData = await response.json()
+              //if (resData.results.length > 0) {
+                console.log(resData.data);
+                  return setData(resData.data)
+              /*} else {
+                  return setMessage('Not Found.')
+              }*/
+          }
+          fetchData()
       }
-    )
-  },[])
+  }, [search])
+
+  const handleSearch = (e, term) => {
+      e.preventDefault()
+      setSearch(term)
+  }
+
+
   return (
-    <div className="App">
-      <div> 
-        <NavbarComp />
+      <div>
+        <div>
+          
+        </div>
+          <SearchBar handleSearch={handleSearch} />
+          {message}
+          <Gallery data={data} />
       </div>
-       <h1> Your Adventure Begins Here...</h1>
-      <div className= "search-bar-container">
-        <SearchBar></SearchBar>
-      </div>
-    </div>
   )
 }
 
