@@ -69,10 +69,8 @@ function GalleryItem(props) {
                         </ul>
                         <h5>Park Weather</h5>
                         <p>{props.item.weatherInfo}</p>
-                        
-                        
-                        
-                </div>
+                        <br></br>
+                    </div>
             </div>
         )
     }
