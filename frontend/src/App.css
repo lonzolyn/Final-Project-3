@@ -1,5 +1,5 @@
 body {
-    background-image: url("/Users/khadijamumford/Final-Project-3/frontend/src/components/images/photo-1594324587519-20940384fd9c.avif"); 
+    background: url(https://images.unsplash.com/photo-1542981596-17528d8ef911?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2848&q=80);
     background-size: cover;   
     background-repeat: no-repeat;
     background-position: center center;
@@ -13,14 +13,49 @@ body {
   margin: auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  text-align: center;
   min-width: 200px;
   color:black;
   text-shadow: 2px 2px 5px grey;
   }
-  
-  img{
-    height: 200px;
-    width:200px;
+
+  .wrapper .content{
+    height: 300px;
+    width: 1000px;
+    position: absolute;
+    bottom: 200px;
+    left: 300px;
   }
+.wrapper .content h3{
+    text-align: center;
+}
+
+.wrapper .content p{
+    text-align: left;
+}
+  .wrapper .content img {
+    height: 300px;
+    width: 500px;
+    right: 10px;
+  }
+
+.wrapper .content .row .column{
+    float: left;
+    width: 50%;
+    padding: 10px;
+}
+
+.wrapper .content .row{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+
+
+
+
+
+  
 

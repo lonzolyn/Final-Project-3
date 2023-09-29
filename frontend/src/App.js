@@ -5,7 +5,6 @@ import NavbarComp from './components/NavbarComp';
 import Gallery from './components/Gallery';
 import SearchBar from './components/SearchBar';
 
-
 const App = () => {
   let [search, setSearch] = useState('')
   let [message, setMessage] = useState('')
@@ -38,13 +37,13 @@ useEffect(() => {
 
   return (
       <div>
-        <div>
-          
-        </div>
+        <h1>Your Adventure Begins Here...</h1>
           <SearchBar handleSearch={handleSearch} />
           {message}
           <Gallery data={data} />
+          <NavbarComp></NavbarComp>
       </div>
+      
   )
 }
 
