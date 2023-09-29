@@ -1,0 +1,32 @@
+img{
+    height: 50px;
+    width: 50px;
+  /* put value of image height as your need */
+  float: left;
+  margin-right: 7px;
+}
+
+.container {
+   position: fixed;
+   top: 0px;
+   font-weight:bold;
+   color: black;
+   font-size:15px;
+   padding: 0;
+   width: 100%;
+}
+
+.navbar{
+  position: fixed;
+  top: 0px;
+  padding:0;
+}
+    
+
+
+
+
+
+
+
+

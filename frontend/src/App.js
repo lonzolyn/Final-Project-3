@@ -5,7 +5,6 @@ import NavbarComp from './components/NavbarComp';
 import Gallery from './components/Gallery';
 import SearchBar from './components/SearchBar';
 
-
 const App = () => {
   let [search, setSearch] = useState('')
   let [message, setMessage] = useState('')
@@ -37,14 +36,30 @@ useEffect(() => {
 
 
   return (
-      <div>
-        <div>
-          
-        </div>
+    <div>
+        <h1>Your Adventure Begins Here...</h1>
           <SearchBar handleSearch={handleSearch} />
           {message}
           <Gallery data={data} />
-      </div>
+          <NavbarComp></NavbarComp>
+
+            <div class="bird-container bird-container-one">
+              <div class="bird bird-one"></div>
+            </div>
+
+            <div class="bird-container bird-container-two">
+              <div class="bird bird-two"></div>
+            </div>  
+
+            <div class="bird-container bird-container-three">
+              <div class="bird bird-three"></div>
+            </div> 
+
+            <div class="bird-container bird-container-four">
+              <div class="bird bird-four"></div>
+            </div>
+    </div>
+      
   )
 }
 
